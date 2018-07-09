@@ -8,19 +8,27 @@ public class Message implements Serializable{
     @Id
     private String id;
 
-    private String message;
+    private String body;
 
-    public Message(String id, String message) {
+    public Message(String id, String body) {
 
         this.id = id;
-        this.message = message;
+        this.body = body;
     }
 
     public String getId() {
         return id;
     }
 
-    public String getMessage() {
-        return message;
+    public String getBody() {
+        return body;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id='" + id + '\'' +
+                ", body='" + body + '\'' +
+                '}';
     }
 }

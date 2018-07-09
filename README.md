@@ -20,20 +20,16 @@ docker-compose ps
 
 ### How to use it
 
-Send a request to it.
+Send a message to it.
 
 ```sh
 curl -v -H 'Content-Type: text/plain' --data 'i like kittens' http://localhost:8080/message/1
 ```
 
-### How to check the database
-
-First install mongoDB shell, then:
+Get your message back.
 
 ```sh
-mongo
-
-> db.message.find();
+curl -i http://localhost:8080/message/1
 ```
 
 If everything worked you will see your message.

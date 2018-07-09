@@ -7,8 +7,8 @@ services:
   mongo:
     image: "mongo"
     restart: always
-    ports:
-     - "27017:27017"
+    #ports:
+    # - "27017:27017"
   rabbitmq:
      image: "rabbitmq:alpine"
      restart: always
